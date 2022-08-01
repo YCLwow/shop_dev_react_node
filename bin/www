@@ -1,4 +1,13 @@
-#!/usr/bin/env node
+/*
+ * @Author: liuyichen
+ * @Date: 2022-07-28 14:36:10
+ * @LastEditors: liuyichen
+ * @LastEditTime: 2022-08-01 14:21:37
+ * @FilePath: \代码仓库\shop_dev_react_node\bin\www
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by liuyichen, All Rights Reserved. 
+ */
 
 /**
  * Module dependencies.
@@ -12,7 +21,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**

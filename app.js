@@ -8,7 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+// 引入跨域插件
+const cors = require('cors'); 
+// 解决跨域
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
