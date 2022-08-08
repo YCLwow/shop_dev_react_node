@@ -2,7 +2,7 @@
  * @Author: liuyichen
  * @Date: 2022-07-27 16:28:21
  * @LastEditors: liuyichen
- * @LastEditTime: 2022-08-05 10:52:47
+ * @LastEditTime: 2022-08-08 09:36:52
  * @FilePath: \代码仓库\shop_dev_react_node\routes\index.js
  * @Description: 
  * 
@@ -16,17 +16,7 @@ const app=express()
 const jwt =require('jsonwebtoken')
 // 自定义秘钥 
 const secretkey='secret12345'
-// 引入解码工具
-const { expressjwt } = require("express-jwt");
 
-//只要配置express-jwt这个中间件，就可以把解析出来的信息挂载在req.auth
-//除了api开头的请求地址其他地址都需要验证
-app.use(expressjwt({
-  secret: 'secret12345',  // 签名的密钥 或 PublicKey
-  algorithms:['HS256']
-}).unless({
-  path: ['/login', '/signup']  // 指定路径不经过 Token 解析
-}))
 
 
 var router = express.Router();
