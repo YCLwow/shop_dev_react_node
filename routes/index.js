@@ -2,7 +2,7 @@
  * @Author: liuyichen
  * @Date: 2022-07-27 16:28:21
  * @LastEditors: liuyichen
- * @LastEditTime: 2022-09-16 10:46:56
+ * @LastEditTime: 2022-09-16 14:46:07
  * @FilePath: \代码仓库\shop_dev_react_node\routes\index.js
  * @Description: 
  * 
@@ -52,9 +52,10 @@ router.get('/login', function(req, res, next) {
 	});
 });
 
-router.get('/productList',function(req,res,next){
-  let sql =`select * from product_list where productType = ?`
-  let sqlValue  = [req.query.productType]
+router.post('/productList',function(req,res,next){
+  let sql =`select * from product_lists where productType in ( ?,?,? )`
+  let sqlValue  =req.body.productType
+  console.log(sqlValue)
   db.querySql(sql,sqlValue,function(results,fields){
     res.json({code: 200,data:results,message: '成功',sucess:true});
   })
