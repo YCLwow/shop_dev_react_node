@@ -2,7 +2,7 @@
  * @Author: liuyichen
  * @Date: 2022-07-28 14:36:10
  * @LastEditors: liuyichen
- * @LastEditTime: 2022-08-08 09:40:48
+ * @LastEditTime: 2022-09-16 08:55:25
  * @FilePath: \代码仓库\shop_dev_react_node\app.js
  * @Description: 
  * 
@@ -32,7 +32,7 @@ app.use(expressjwt({
   secret: 'secret12345',  // 签名的密钥 或 PublicKey
   algorithms:['HS256']
 }).unless({
-  path: [ '/signup']  // 指定路径不经过 Token 解析
+  path: [ '/signup','/login']  // 指定路径不经过 Token 解析
 }))
 
 // view engine setup

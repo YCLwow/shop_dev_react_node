@@ -3,8 +3,8 @@
  * @Author: liuyichen
  * @Date: 2022-07-28 08:58:56
  * @LastEditors: liuyichen
- * @LastEditTime: 2022-07-28 13:42:57
- * @FilePath: \shop_dev\shop_dev_node\db\mysql.js
+ * @LastEditTime: 2022-09-16 10:55:09
+ * @FilePath: \代码仓库\shop_dev_react_node\db\mysql.js
  * @Description: 
  * 
  * Copyright (c) 2022 by liuyichen, All Rights Reserved. 
@@ -15,7 +15,7 @@ var db_config = {
     user: "root",
     password: "123456",
     port: "3306",
-    database: "user"
+    database: "product_shop"
 }
 
 //查询成功后关闭mysql
